@@ -28,11 +28,10 @@ import java.util.stream.Collectors;
 @Service
 @Transactional
 @AllArgsConstructor
-@NoArgsConstructor
 @Slf4j
 
 
-public abstract class BankAccountServiceImpl implements BankAccountService {
+public  class BankAccountServiceImpl implements BankAccountService {
     private CustomerRepository customerRepository;
     private BankAccountRepository bankAccountRepository;
     private AccountOperationRepository accountOperationRepository;
