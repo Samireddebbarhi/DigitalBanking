@@ -3,7 +3,7 @@ package net.samir.e__banking1.dtos;
 import lombok.Data;
 import net.samir.e__banking1.enums.OperationType;
 
-import java.sql.Date;
+import java.util.Date;
 
 
 @Data

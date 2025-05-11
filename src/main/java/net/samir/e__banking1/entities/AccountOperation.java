@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.samir.e__banking1.enums.OperationType;
 
-import java.sql.Date;
+import java.util.Date;
 
 @Entity
 @Data

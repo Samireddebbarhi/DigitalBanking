@@ -1,10 +1,11 @@
 package net.samir.e__banking1.mappers;
 
 
-import net.samir.e__banking1.dtos.BankAccountDTO;
+import net.samir.e__banking1.dtos.AccountOperationDTO;
 import net.samir.e__banking1.dtos.CurrentBankAccountDTO;
 import net.samir.e__banking1.dtos.CustomerDTO;
 import net.samir.e__banking1.dtos.SavingBankAccountDTO;
+import net.samir.e__banking1.entities.AccountOperation;
 import net.samir.e__banking1.entities.CurrentAccount;
 import net.samir.e__banking1.entities.Customer;
 import net.samir.e__banking1.entities.SavingAccount;
@@ -51,6 +52,12 @@ public class BankAccountMapperImpl {
         currentAccount.setCustomer(fromCustomerDTO(currentBankAccountDTO.getCustomerDTO()));
         return currentAccount;
     }
-
-
+    public AccountOperationDTO fromAccountOperation(AccountOperation accountOperation){
+        AccountOperationDTO accountOperationDTO=new AccountOperationDTO();
+        BeanUtils.copyProperties(accountOperation,accountOperationDTO);
+        return accountOperationDTO;
+    }
 }
+
+
+

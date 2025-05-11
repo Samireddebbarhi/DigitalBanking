@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import net.samir.e__banking1.enums.AccountStatus;
 
-import java.sql.Date;
+import java.util.Date;
 
 @Data
 public class SavingBankAccountDTO extends BankAccountDTO {
