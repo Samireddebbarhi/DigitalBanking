@@ -6,7 +6,7 @@ import net.samir.e__banking1.services.BankAccountService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@RestController
 public class CustomerRestController {
 
     private BankAccountService bankAccountService;

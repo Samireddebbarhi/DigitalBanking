@@ -8,9 +8,11 @@ import net.samir.e__banking1.services.BankAccountService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@RestController
 public class BankAccountRestAPI {
     private BankAccountService bankAccountService;
     public BankAccountRestAPI(BankAccountService bankAccountService) {

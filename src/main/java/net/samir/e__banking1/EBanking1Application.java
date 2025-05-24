@@ -32,10 +32,10 @@ public class EBanking1Application {
         @Bean
         public CommandLineRunner commandLineRunner(BankAccountService bankAccountService) {
             return (args) -> {
-                Stream.of("Samir", "Eddebbarhi", "said").forEach(name -> {
+                Stream.of("Samir", "Eddebbarhi", "zaid Benaalouch").forEach(name -> {
                     CustomerDTO customer = new CustomerDTO();
                     customer.setName(name);
-                    customer.setEmail("samir" + name + "@gmail.com");
+                    customer.setEmail("test" + name + "@gmail.com");
                     bankAccountService.saveCustomer(customer);
                 });
                 bankAccountService.listCustomers().forEach(customer -> {
@@ -46,7 +46,7 @@ public class EBanking1Application {
                         e.printStackTrace();
                     }
                 });
-               /* List<BankAccountDTO> bankAccounts = bankAccountService.bankAccountList();
+               List<BankAccountDTO> bankAccounts = bankAccountService.bankAccountList();
                 for (BankAccountDTO bankAccount : bankAccounts) {
                     for (int i = 0; i < 10; i++) {
                         String accountId;
@@ -55,12 +55,12 @@ public class EBanking1Application {
                         } else {
                             accountId = ((CurrentBankAccountDTO) bankAccount).getId();
                         }
-                        bankAccountService.credit(accountId, 10000 + Math.random() * 120000, "Credit");
-                        bankAccountService.debit(accountId, 1000 + Math.random() * 9000, "Debit");
+                        bankAccountService.credit(accountId, 100 + Math.random() * 10, "Credit");
+                        bankAccountService.debit(accountId, 100 + Math.random() * 90, "Debit");
                     }
                 }
 
-                */
+
             };
         }
     }
